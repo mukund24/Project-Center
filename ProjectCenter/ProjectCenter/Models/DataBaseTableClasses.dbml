@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProjectDatabase" Class="DataBaseTableClassesDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\ProjectDatabase.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ProjectDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmpId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Employee_Project" Member="Projects" ThisKey="EmpId" OtherKey="ManagerID" Type="Project" />
+      <Association Name="Employee_ProjectTeamList" Member="ProjectTeamLists" ThisKey="EmpId" OtherKey="EmpID" Type="ProjectTeamList" />
+      <Association Name="Employee_WorkPackageDescription" Member="WorkPackageDescriptions" ThisKey="EmpId" OtherKey="CreatedBy" Type="WorkPackageDescription" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Projects" Member="Projects">
+    <Type Name="Project">
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Start_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="End_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Last_Review_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ProjectStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Project_Desc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ManagerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Project_ProjectTeam" Member="ProjectTeams" ThisKey="ProjectID" OtherKey="ProjectID" Type="ProjectTeam" />
+      <Association Name="Project_Software_Requirement" Member="Software_Requirements" ThisKey="ProjectID" OtherKey="ProjectID" Type="Software_Requirement" />
+      <Association Name="Project_WorkPackageDescription" Member="WorkPackageDescriptions" ThisKey="ProjectID" OtherKey="ProjectID" Type="WorkPackageDescription" />
+      <Association Name="Employee_Project" Member="Employee" ThisKey="ManagerID" OtherKey="EmpId" Type="Employee" IsForeignKey="true" />
+      <Association Name="ProjectStatus_Project" Member="ProjectStatus" ThisKey="ProjectStatusID" OtherKey="ProjectStatusID" Type="ProjectStatus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectStatus" Member="ProjectStatus">
+    <Type Name="ProjectStatus">
+      <Column Name="ProjectStatusID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusValue" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProjectStatus_Project" Member="Projects" ThisKey="ProjectStatusID" OtherKey="ProjectStatusID" Type="Project" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectTeam" Member="ProjectTeams">
+    <Type Name="ProjectTeam">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ProjectTeam_ProjectTeamList" Member="ProjectTeamLists" ThisKey="TeamID" OtherKey="TeamID" Type="ProjectTeamList" />
+      <Association Name="ProjectTeam_Software_Requirement_Team" Member="Software_Requirement_Teams" ThisKey="TeamID" OtherKey="TeamID" Type="Software_Requirement_Team" />
+      <Association Name="Project_ProjectTeam" Member="Project" ThisKey="ProjectID" OtherKey="ProjectID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectTeamList" Member="ProjectTeamLists">
+    <Type Name="ProjectTeamList">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmpID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_ProjectTeamList" Member="Employee" ThisKey="EmpID" OtherKey="EmpId" Type="Employee" IsForeignKey="true" />
+      <Association Name="ProjectTeam_ProjectTeamList" Member="ProjectTeam" ThisKey="TeamID" OtherKey="TeamID" Type="ProjectTeam" IsForeignKey="true" />
+      <Association Name="TypeOfUser_ProjectTeamList" Member="TypeOfUser" ThisKey="TypeID" OtherKey="TypeID" Type="TypeOfUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Software_Requirement_Teams" Member="Software_Requirement_Teams">
+    <Type Name="Software_Requirement_Team">
+      <Column Name="Sr_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ProjectTeam_Software_Requirement_Team" Member="ProjectTeam" ThisKey="TeamID" OtherKey="TeamID" Type="ProjectTeam" IsForeignKey="true" />
+      <Association Name="Software_Requirement_Software_Requirement_Team" Member="Software_Requirement" ThisKey="Sr_ID" OtherKey="Sr_ID" Type="Software_Requirement" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Software_Requirements" Member="Software_Requirements">
+    <Type Name="Software_Requirement">
+      <Column Name="Sr_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sr_Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sr_Desc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Sr_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Sr_IssuesText" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Software_Requirement_Software_Requirement_Team" Member="Software_Requirement_Teams" ThisKey="Sr_ID" OtherKey="Sr_ID" Type="Software_Requirement_Team" />
+      <Association Name="Software_Requirement_WpsForSr" Member="WpsForSrs" ThisKey="Sr_ID" OtherKey="Sr_ID" Type="WpsForSr" />
+      <Association Name="Project_Software_Requirement" Member="Project" ThisKey="ProjectID" OtherKey="ProjectID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeOfUser" Member="TypeOfUsers">
+    <Type Name="TypeOfUser">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TypeOfUser_ProjectTeamList" Member="ProjectTeamLists" ThisKey="TypeID" OtherKey="TypeID" Type="ProjectTeamList" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkPackageDescription" Member="WorkPackageDescriptions">
+    <Type Name="WorkPackageDescription">
+      <Column Name="Wp_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Wp_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Wp_Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Wp_Title" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="WorkPackageDescription_WpsForSr" Member="WpsForSrs" ThisKey="Wp_Id" OtherKey="Wp_Id" Type="WpsForSr" />
+      <Association Name="WorkPackageDescription_StatusReport" Member="StatusReports" ThisKey="Wp_Id" OtherKey="Wp_Id" Type="StatusReport" />
+      <Association Name="Employee_WorkPackageDescription" Member="Employee" ThisKey="CreatedBy" OtherKey="EmpId" Type="Employee" IsForeignKey="true" />
+      <Association Name="Project_WorkPackageDescription" Member="Project" ThisKey="ProjectID" OtherKey="ProjectID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WpsForSrs" Member="WpsForSrs">
+    <Type Name="WpsForSr">
+      <Column Name="Wp_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sr_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Software_Requirement_WpsForSr" Member="Software_Requirement" ThisKey="Sr_ID" OtherKey="Sr_ID" Type="Software_Requirement" IsForeignKey="true" />
+      <Association Name="WorkPackageDescription_WpsForSr" Member="WorkPackageDescription" ThisKey="Wp_Id" OtherKey="Wp_Id" Type="WorkPackageDescription" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StatusReport" Member="StatusReports">
+    <Type Name="StatusReport">
+      <Column Name="StatusReportID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusReportLog" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Wp_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReportTitle" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="WorkPackageDescription_StatusReport" Member="WorkPackageDescription" ThisKey="Wp_Id" OtherKey="Wp_Id" Type="WorkPackageDescription" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,24 @@
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\Bin\Debug\Lab12.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\Bin\Debug\Lab12.pdb
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\Bin\Debug\AppManifest.xaml
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\Bin\Debug\Lab12.xap
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\Bin\Debug\Lab12TestPage.html
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\obj\Debug\App.g.i.cs
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\obj\Debug\MainPage.g.i.cs
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\obj\Debug\Lab12.g.resources
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\obj\Debug\Lab12.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\obj\Debug\Lab12.pdb
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12\obj\Debug\XapCacheFile.xml
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\Bin\Debug\Lab12.dll
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\Bin\Debug\Lab12.pdb
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\Bin\Debug\AppManifest.xaml
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\Bin\Debug\Lab12.xap
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\Bin\Debug\Lab12TestPage.html
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\obj\Debug\App.g.i.cs
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\obj\Debug\MainPage.g.i.cs
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\obj\Debug\Lab12.g.resources
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\obj\Debug\Lab12.dll
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\obj\Debug\Lab12.pdb
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\Lab12\obj\Debug\XapCacheFile.xml

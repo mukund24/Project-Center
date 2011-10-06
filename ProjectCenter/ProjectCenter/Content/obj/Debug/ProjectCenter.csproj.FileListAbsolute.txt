@@ -1,0 +1,10 @@
+c:\users\mukund\documents\visual studio 2010\Projects\ProjectCenter\ProjectCenter\bin\ProjectCenter.dll
+c:\users\mukund\documents\visual studio 2010\Projects\ProjectCenter\ProjectCenter\bin\ProjectCenter.pdb
+c:\users\mukund\documents\visual studio 2010\Projects\ProjectCenter\ProjectCenter\obj\Debug\ResolveAssemblyReference.cache
+c:\users\mukund\documents\visual studio 2010\Projects\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.dll
+c:\users\mukund\documents\visual studio 2010\Projects\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.pdb
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\bin\ProjectCenter.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\bin\ProjectCenter.pdb
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.pdb

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProjectDatabase" Class="WikiDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\App_Data\ProjectDatabase.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ProjectDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="EmpId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fname" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Lname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Employee_Project" Member="Projects" ThisKey="EmpId" OtherKey="ManagerID" Type="Project" />
+      <Association Name="Employee_PostComment" Member="PostComments" ThisKey="EmpId" OtherKey="EmpId" Type="PostComment" />
+      <Association Name="Employee_ReplyComment" Member="ReplyComments" ThisKey="EmpId" OtherKey="EmpId" Type="ReplyComment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Projects" Member="Projects">
+    <Type Name="Project">
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Start_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="End_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Last_Review_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ProjectStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Project_Desc" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ManagerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Project_PostComment" Member="PostComments" ThisKey="ProjectID" OtherKey="ProjectID" Type="PostComment" />
+      <Association Name="Employee_Project" Member="Employee" ThisKey="ManagerID" OtherKey="EmpId" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PostComment" Member="PostComments">
+    <Type Name="PostComment">
+      <Column Name="PostId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsPublic" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="PostComment_ReplyComment" Member="ReplyComments" ThisKey="PostId" OtherKey="PostId" Type="ReplyComment" />
+      <Association Name="Employee_PostComment" Member="Employee" ThisKey="EmpId" OtherKey="EmpId" Type="Employee" IsForeignKey="true" />
+      <Association Name="Project_PostComment" Member="Project" ThisKey="ProjectID" OtherKey="ProjectID" Type="Project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReplyComment" Member="ReplyComments">
+    <Type Name="ReplyComment">
+      <Column Name="ReplyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PostId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyText" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Employee_ReplyComment" Member="Employee" ThisKey="EmpId" OtherKey="EmpId" Type="Employee" IsForeignKey="true" />
+      <Association Name="PostComment_ReplyComment" Member="PostComment" ThisKey="PostId" OtherKey="PostId" Type="PostComment" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

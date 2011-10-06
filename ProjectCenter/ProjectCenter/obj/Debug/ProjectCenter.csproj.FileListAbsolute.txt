@@ -1,0 +1,12 @@
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\bin\ProjectCenter.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\bin\ProjectCenter.pdb
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.g.resources
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.pdb
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\ProjectCenter\bin\ProjectCenter.dll
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\ProjectCenter\bin\ProjectCenter.pdb
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\ProjectCenter\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.g.resources
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.dll
+C:\Users\Mukund\Desktop\ProjectCenter - Copy\ProjectCenter\ProjectCenter\obj\Debug\ProjectCenter.pdb

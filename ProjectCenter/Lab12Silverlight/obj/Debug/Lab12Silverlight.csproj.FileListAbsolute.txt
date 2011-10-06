@@ -1,0 +1,12 @@
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\Bin\Debug\Lab12Silverlight.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\Bin\Debug\Lab12Silverlight.pdb
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\Bin\Debug\AppManifest.xaml
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\Bin\Debug\Lab12Silverlight.xap
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\Bin\Debug\Lab12SilverlightTestPage.html
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\obj\Debug\App.g.cs
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\obj\Debug\MainPage.g.cs
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\obj\Debug\Lab12Silverlight.g.resources
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\obj\Debug\Lab12Silverlight.dll
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\obj\Debug\Lab12Silverlight.pdb
+C:\Users\Mukund\Desktop\ProjectCenter\ProjectCenter\Lab12Silverlight\obj\Debug\XapCacheFile.xml

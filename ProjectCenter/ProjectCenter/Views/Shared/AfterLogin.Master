@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head  runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link rel="Stylesheet" href="../../Content/Site.css" />
+    <link href="../../Content/ui.all.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../Scripts/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="../../Scripts/ui.core.js"></script>
+<script type="text/javascript" src="../../Scripts/ui.datepicker.js"></script>
+    <asp:ContentPlaceHolder ID="js" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+<div class="page">
+ <div id="menucontainer">
+            
+                <ul id="menu">              
+                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
+                   
+                    <li><%: Html.ActionLink("Software Requirements", "List", "Software_Reqts")%></li>
+                    <li><%: Html.ActionLink("Status Reports", "Status", "StatusReports")%></li>
+                    <li><%: Html.ActionLink("Bug Reports", "List", "BugReports")%></li>
+                    <li><%: Html.ActionLink("Projects","List","Projects")%></li>
+                    <li><%:Html.ActionLink("Work Packages","List","WorkPackage") %></li>
+                    <li><a href="../../Lab12TestPage.aspx">SILVERLIGHT PAGE</a></li>
+                </ul>
+            
+     </div>
+       
+            <div id="logindisplay">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div> 
+     <div class="clear"></div>
+     
+    <div id="mainbody">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+       
+        </asp:ContentPlaceHolder>  
+    </div>
+     <div id="footer">
+       © 2011 MNM WEB DEVELOPERS
+       </div>
+</div>
+</body>
+</html>

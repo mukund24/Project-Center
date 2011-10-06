@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCenter", "ProjectCenter\ProjectCenter.csproj", "{1EB1A78E-1B1A-4873-8FEB-14BFC873A2D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab12", "Lab12\Lab12.csproj", "{ED2C1CC2-0C7B-4AAA-B942-76F59A2E362B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiWebsite", "WikiWebsite\WikiWebsite.csproj", "{BE69AEDB-CB47-4FAF-926E-1040595FEFE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EB1A78E-1B1A-4873-8FEB-14BFC873A2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB1A78E-1B1A-4873-8FEB-14BFC873A2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB1A78E-1B1A-4873-8FEB-14BFC873A2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB1A78E-1B1A-4873-8FEB-14BFC873A2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED2C1CC2-0C7B-4AAA-B942-76F59A2E362B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2C1CC2-0C7B-4AAA-B942-76F59A2E362B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2C1CC2-0C7B-4AAA-B942-76F59A2E362B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2C1CC2-0C7B-4AAA-B942-76F59A2E362B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE69AEDB-CB47-4FAF-926E-1040595FEFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE69AEDB-CB47-4FAF-926E-1040595FEFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE69AEDB-CB47-4FAF-926E-1040595FEFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE69AEDB-CB47-4FAF-926E-1040595FEFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
